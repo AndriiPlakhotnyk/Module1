@@ -33,13 +33,10 @@ public class Exercise3 {
         double b = arrayList.get(1);
         double c = arrayList.get(2);
 
-        if (a + b <= c || a + c <= b || b + c <= a) {
-            System.out.println("Треугольник не существует");
-            System.exit(0);
-        } else {
-            double Pabc = (a + b + c) / 2.0;
-            double Sabc = Math.sqrt(Pabc * (Pabc - a) * (Pabc - b) * (Pabc - c));
-            System.out.println("Площадь треугольника равна " + Sabc);
-        }
+
+        double Pabc = (a + b + c) / 2.0;
+        double Sabc = Math.sqrt(Pabc * (Pabc - a) * (Pabc - b) * (Pabc - c));
+        if (Sabc == 0) System.out.println("Треугольник не существует!");
+        else System.out.println("Площадь треугольника равна " + Sabc + " квадратных единиц ");
     }
 }
